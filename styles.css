@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.center {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.heart-container {
+    position: relative;
+}
+
+.heart {
+    width: 100px;
+    height: 100px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1);
+    }
+}
+
+/* Estilize a caixa de mensagem */
+.alert-box {
+    background-color: rgba(black);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(white);
+    text-align: center;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: glow 1s alternate infinite;
+    display: none; /* Inicialmente, a caixa de mensagem estará oculta */
+    z-index: 9999;
+}
+.alert-text {
+    color: white; /* Cor do texto */
+    font-size: 18px; /* Tamanho da fonte */
+    position: relative; /* Para definir um z-index separado */
+    z-index: 10000; /* Valor alto para que o texto esteja na frente de tudo */
+}
+
+/* Efeito de brilho */
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+    }
+}
+.beijo-gif {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Classe para ocultar elementos */
+.hidden {
+    display: none;
+}
+/* Restante do código CSS... */
+
+/* Animação de estouro */
+@keyframes explode {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+/* Restante do código CSS... */
+
+/* Animação de zoom e rotação */
+@keyframes zoom-rotate {
+    0% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(5) rotate(720deg);
+        opacity: 0;
+    }
+}
